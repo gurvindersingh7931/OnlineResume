@@ -1,6 +1,4 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
+
 var bio = {
     "name": "Gurvinder Singh",
     "role": "Web Designer",
@@ -26,17 +24,17 @@ function displayBio() {
     //var formattedContactGeneric = HTMLcontactGeneric.replace("%data%","Contacts");
     //$("#header").append(formattedContactGeneric);
     var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-    $("#header, #footerContacts").append(formattedMobile);
+    $("#topContacts, #footerContacts").append(formattedMobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $("#header, #footerContacts").append(formattedEmail);
+    $("#topContacts, #footerContacts").append(formattedEmail);
     var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#header, #footerContacts").append(formattedGithub);
+    $("#topContacts, #footerContacts").append(formattedGithub);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#header, #footerContacts").append(formattedLocation);
+    $("#topContacts, #footerContacts").append(formattedLocation);
     var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
         $("#header").append(formattedBiopic);
     var formattedWelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formattedWelcomeMessage);
+    $("#header").append("\n"+formattedWelcomeMessage);
 
     if (HTMLskills.length > 0) {
         $("#header").append(HTMLskillsStart);
